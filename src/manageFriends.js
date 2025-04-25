@@ -1,4 +1,6 @@
-export function manageFriends(state, action) {
+const initialState = { friends: [] };
+
+export function manageFriends(state = initialState, action) {
   switch (action.type) {
     case "friends/add":
       return { friends: [...state.friends, action.payload] };
